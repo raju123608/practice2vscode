@@ -1,4 +1,5 @@
 import { LightningElement } from "lwc";
+// checout for pull git to vscode
 
 export default class ProgressBarExample extends LightningElement {
   progress = 0;
