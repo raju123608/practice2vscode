@@ -1,0 +1,13 @@
+<template>
+  <lightning-combobox
+    label="inputlist"
+    options={inputsoptions}
+    value={selectedinput}
+    onchange={handledata}
+  >
+  </lightning-combobox>
+  <template if:true={showchildcomponents}>
+    <c-userselectionpiclistchild2 selectedvalue={selectedinput}>
+    </c-userselectionpiclistchild2>
+  </template>
+</template>

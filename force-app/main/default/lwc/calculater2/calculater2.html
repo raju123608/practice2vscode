@@ -1,0 +1,16 @@
+<template>
+    <!-- <c-calculatersimple onnumberchange={calculatevalues}></c-calculatersimple>
+    <lightning-button label="Add" onclick={addme}></lightning-button>
+    <lightning-button label="Subtract" onclick={Subtractme}></lightning-button>
+    <lightning-button label="Multify" onclick={Multifyme}></lightning-button>
+    <lightning-button label="Divison" onclick={Divisionme}></lightning-button>
+    <lightning-input type="number" label="Result" value={result} readonly></lightning-input> -->
+    <c-calculatersimple></c-calculatersimple>
+
+    <lightning-button label="Add" onclick={handleAdd}></lightning-button>
+    <lightning-button label="Subtract" onclick={handleSubtract}></lightning-button>
+    <lightning-button label="Multiply" onclick={handleMultiply}></lightning-button>
+    <lightning-button label="Divide" onclick={handleDivide}></lightning-button>
+
+    <lightning-input type="number" label="Result" value={result} readonly></lightning-input>
+</template>

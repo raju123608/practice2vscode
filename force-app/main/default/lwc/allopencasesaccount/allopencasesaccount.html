@@ -1,0 +1,19 @@
+<template>
+   <lightning-card title="allopen case Accounts">
+
+    <lightning-button label="Show all cases " onclick={showcases} variant={success}>
+
+    </lightning-button>
+    <template if:true={showTable}>
+
+    <lightning-datatable key-field="Id"
+    columns={columns}
+    data={cases}
+    hide-checkbox-column="true">
+
+    </lightning-datatable>
+</template>
+
+   </lightning-card> 
+
+</template>

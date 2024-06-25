@@ -1,0 +1,32 @@
+<template>
+  <lightning-card
+    div
+    class="slds-page-header"
+    title="Create a Account With Contact"
+  >
+    <lightning-layout>
+      <div class="slds-text-body_regular">
+        <lightning-input
+          label="Name"
+          variant="label-hidden"
+          placeholder="Enter Name"
+          onchange={searchme}
+        >
+        </lightning-input>
+      </div>
+      <lightning-button
+        class="slds-p-left_xx-large"
+        label="Save"
+        variant="success"
+        onclick={savemee}
+      >
+      </lightning-button>
+    </lightning-layout>
+
+    <!-- <template for:each={contacts} for:item="cons">
+                <p key ={cons.Id} >{cons.Name}</p>
+            </template> -->
+    <lightning-datatable key-field="Id" columns={column} data={contacts}>
+    </lightning-datatable>
+  </lightning-card>
+</template>

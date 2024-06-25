@@ -1,0 +1,36 @@
+<template>
+  <lightning-card>
+    <!-- <lightning-combobox label="Select frorm type"
+        value={selectedFromType}
+        options={formTypes}
+        onchange={handleFormTypeChange}>
+
+        </lightning-combobox>
+        <template if:true={isformvisiable}>
+            
+
+        <lightning-input label="Name" ></lightning-input>
+        
+
+        </template>
+
+        <template if:true={isSelectedFormType2}>
+            
+        <lightning-input label="Email" ></lightning-input>
+                 </template> -->
+    <lightning-combobox
+      label="Select Form Type"
+      value={selectedFormType}
+      options={formTypeOptions}
+      onchange={handleFormTypeChange}
+    ></lightning-combobox>
+
+    <template if:true={showNameField}>
+      <lightning-input label="Name"></lightning-input>
+    </template>
+
+    <template if:true={showEmailField}>
+      <lightning-input label="Email"></lightning-input>
+    </template>
+  </lightning-card>
+</template>

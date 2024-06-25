@@ -1,0 +1,15 @@
+<template>
+  <lightning-card title="Account List" icon-name="standard:account">
+    <template if:true={accountList}>
+      <ul>
+        <template for:each={accountList} for:item="account">
+          <li key={account.id}>{account.fields.Name.value}</li>
+          <!-- Add more fields as needed -->
+        </template>
+      </ul>
+    </template>
+    <template if:false={accountList}>
+      <p>No accounts found</p>
+    </template>
+  </lightning-card>
+</template>

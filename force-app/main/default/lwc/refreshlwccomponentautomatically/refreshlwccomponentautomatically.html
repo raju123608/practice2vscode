@@ -1,0 +1,12 @@
+<template>
+  <lightning-card title="Refresh LWc Automatically">
+    <lightning-record-form
+      object-api-name="Account"
+      fields="Name,Desciption"
+      onsubmit={handleEvent}
+    >
+    </lightning-record-form>
+    <lightning-datatable key-field="id" data={data} columns={columns}>
+    </lightning-datatable>
+  </lightning-card>
+</template>

@@ -1,0 +1,25 @@
+<template>
+  <lightning-card title="Search Account Data">
+    <lightning-layout>
+      <lightning-input onchange={searchme} variant="success"> </lightning-input>
+      <lightning-button label="Search" onclick={getdataa}></lightning-button>
+    </lightning-layout>
+    <lightning-datatable
+      key-field="Id"
+      data={accounts}
+      columns={columns}
+      hide-checkbox-column="true"
+      onrowaction={handleRowAction}
+    >
+    </lightning-datatable>
+  </lightning-card>
+  <lightning-card title=" Related Contacts Recods ">
+    <lightning-datatable
+      key-field="Id"
+      data={contacts}
+      columns={columns2}
+      hide-checkbox-column="true"
+    >
+    </lightning-datatable>
+  </lightning-card>
+</template>

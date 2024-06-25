@@ -1,0 +1,50 @@
+<template>
+  <div class="slds-p-around_medium">
+    <lightning-input
+      label="Account Name"
+      onchange={Accountname}
+    ></lightning-input>
+
+    <lightning-input
+      label="Account WebSite"
+      onchange={conweb}
+    ></lightning-input>
+  </div>
+
+  <div class="slds-p-around_medium">
+    <lightning-input
+      label="Contact First Name"
+      onchange={conname}
+    ></lightning-input>
+    <lightning-input
+      label="Contact Last Name"
+      onchange={conlastname}
+    ></lightning-input>
+    <lightning-input
+      label="Contact Email"
+      onchange={contactemail}
+    ></lightning-input>
+    <lightning-input
+      label="Contact phone Number"
+      onchange={contactphone}
+    ></lightning-input>
+  </div>
+
+  <div class="slds-p-around_medium">
+    <lightning-file-upload
+      label="Upload File"
+      accept={acceptedFormats}
+      record-id={accountId}
+      onuploadfinished={handleFileUploadFinished}
+    >
+    </lightning-file-upload>
+  </div>
+  <lightning-button-group>
+    <lightning-button label="save" onclick={savemee}></lightning-button>
+    <lightning-button
+      label="save and new"
+      onclick={saveandnew}
+    ></lightning-button>
+    <lightning-button label="cancel" onclick={cancelme}></lightning-button>
+  </lightning-button-group>
+</template>

@@ -1,0 +1,23 @@
+<template>
+  <!-- <lightning-card title="Toast msesasage after operation done">
+        <lightning-input label="Enter name" value={records} onchange={nameme}></lightning-input>
+        <lightning-button label="Submit" onclick={subme}></lightning-button>
+
+
+         
+    </lightning-card> -->
+
+  <lightning-card title="Submit Record">
+    <div class="slds-p-horizontal_small">
+      <lightning-input
+        label="Name"
+        value={recordName}
+        onchange={handleNameChange}
+      ></lightning-input>
+      <lightning-button
+        label="Submit"
+        onclick={handleSubmit}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

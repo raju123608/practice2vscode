@@ -1,0 +1,17 @@
+<template>
+  <lightning-card title="Dynamic form based on userbased selection">
+    <lightning-combobox
+      label="Select From Type"
+      value={SelectedfromType}
+      options={fromTypeOptions}
+      onchange={handlechange}
+    >
+    </lightning-combobox>
+    <template if:true={NameField}>
+      <lightning-input label="Name" onchange={nameme}></lightning-input>
+    </template>
+    <template if:true={EmailField}>
+      <lightning-input label="Email" onchange={emailme}></lightning-input>
+    </template>
+  </lightning-card>
+</template>

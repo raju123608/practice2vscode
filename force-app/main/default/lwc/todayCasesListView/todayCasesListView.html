@@ -1,0 +1,15 @@
+<template>
+  <template if:true={caselist}>
+    <lightning-card title="Cases Created Today">
+      <lightning-datatable
+        key-field="Id"
+        data={caseData}
+        columns={columns}
+        hide-checkbox-column="true"
+      ></lightning-datatable>
+    </lightning-card>
+  </template>
+  <template if:false={caselist}>
+    <div class="slds-align_absolute-center">No cases created today.</div>
+  </template>
+</template>

@@ -1,0 +1,22 @@
+<template>
+  <lightning-card>
+    <div class="slds-m-around_medium">
+      <lightning-input
+        type="text"
+        label="Filter Contacts"
+        onchange={handleFilterChange}
+      ></lightning-input>
+      <lightning-combobox
+        label="Sort By"
+        options={sortOptions}
+        onchange={handleSortChange}
+      ></lightning-combobox>
+      <template for:each={filteredContacts} for:item="contact">
+        <p key={contact.Id}>{contact.Name}</p>
+      </template>
+    </div>
+    <!-- <template for:each={filteredContacts} for:item="contact">
+            <p key={contact.Id}>{contact.Name}</p>
+        </template> -->
+  </lightning-card>
+</template>

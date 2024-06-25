@@ -1,0 +1,17 @@
+<template>
+  <lightning-card title="DataTable at Button Action">
+    <lightning-datatable
+      key-field="Id"
+      columns={column}
+      data={accounts}
+      show-row-number-column="true"
+      hide-checkbox-column="true"
+      onrowaction={handleRowAction}
+    >
+    </lightning-datatable>
+
+    <c-datatablebuttonactioncontacts
+      account-id={accountId}
+    ></c-datatablebuttonactioncontacts>
+  </lightning-card>
+</template>

@@ -1,0 +1,9 @@
+<template>
+  <lightning-card title="getRelatedListsInfo">
+    <template lwc:if={relatedLists}>
+      <template for:each={relatedLists} for:item="relatedList">
+        <p key={relatedList.label}>{relatedList.label}</p>
+      </template>
+    </template>
+  </lightning-card>
+</template>

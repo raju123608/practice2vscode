@@ -1,0 +1,15 @@
+<template>
+  <lightning-card title="dynamicRendering">
+    <lightning-button
+      label="Filter Agriculture"
+      onclick={handleFilter}
+    ></lightning-button>
+
+    <template for:each={accounts} for:item="account">
+      <div key={account.Id} class="slds-p-around_medium">
+        <p><strong>Name:</strong> {account.Name}</p>
+        <p><strong>Industry:</strong> {account.Industry}</p>
+      </div>
+    </template>
+  </lightning-card>
+</template>

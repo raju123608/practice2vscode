@@ -1,0 +1,18 @@
+<template>
+  <lightning-card title="File Uploader" icon-name="standard:file">
+    <!-- Standard Lightning File Upload Component -->
+    <lightning-file-upload
+      label="Upload Files"
+      name="fileUploader"
+      accept={acceptedFormats}
+      multiple
+      record-id={recordId}
+      onuploadfinished={handleUploadFinished}
+    >
+    </lightning-file-upload>
+
+    <!-- Lightning Datatable to Display Uploaded Files -->
+    <lightning-datatable key-field="Id" data={fileData} columns={fileColumns}>
+    </lightning-datatable>
+  </lightning-card>
+</template>

@@ -1,0 +1,10 @@
+<template>
+  <!-- <template for:each={contacts} for:item="contact">
+            <p key={contact.Id}>{contact.Name} , {contact.Phone}</p>
+        </template> -->
+  <template if:true={contacts}>
+    <lightning-datatable key-field="Id" columns={cloumns} data={contacts}>
+    </lightning-datatable>
+  </template>
+  <template if:false={contacts}> No Contacts found </template>
+</template>

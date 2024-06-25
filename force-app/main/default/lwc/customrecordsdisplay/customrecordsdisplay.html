@@ -1,0 +1,19 @@
+<template>
+  <div>
+    <h1>Fetch and Display Record</h1>
+    <lightning-input
+      label="Record Id"
+      value={recordId}
+      onchange={handleRecordIdChange}
+    ></lightning-input>
+
+    <lightning-record-form
+      record-id={recordId}
+      columns="2"
+      object-api-name="Account"
+      layout-type="Full"
+      mode="view"
+    >
+    </lightning-record-form>
+  </div>
+</template>
